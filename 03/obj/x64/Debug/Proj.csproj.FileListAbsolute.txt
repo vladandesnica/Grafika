@@ -12,3 +12,16 @@ C:\Users\Vale\Desktop\Grafika\cas03\03\obj\x64\Debug\GenerateResource.read.1.tlo
 C:\Users\Vale\Desktop\Grafika\cas03\03\obj\x64\Debug\GenerateResource.write.1.tlog
 C:\Users\Vale\Desktop\Grafika\cas03\03\obj\x64\Debug\AssimpNetSample.exe
 C:\Users\Vale\Desktop\Grafika\cas03\03\obj\x64\Debug\AssimpNetSample.pdb
+C:\Users\Vale\Documents\GitHub\Grafika-Proj\03\obj\x64\Debug\AssimpNetSample.exe
+C:\Users\Vale\Documents\GitHub\Grafika-Proj\03\obj\x64\Debug\AssimpNetSample.pdb
+C:\Users\Vale\Documents\GitHub\Grafika-Proj\03\bin\x64\Debug\3D Models\Duck\duckCM.bmp
+C:\Users\Vale\Documents\GitHub\Grafika-Proj\03\bin\x64\Debug\3D Models\Duck\duck.dae
+C:\Users\Vale\Documents\GitHub\Grafika-Proj\03\bin\x64\Debug\3D Models\Touareg\Touareg.3DS
+C:\Users\Vale\Documents\GitHub\Grafika-Proj\03\bin\x64\Debug\3D Models\Touareg\11817_Zepplin_V2_L3_v4.3ds
+C:\Users\Vale\Documents\GitHub\Grafika-Proj\03\bin\x64\Debug\AssimpNetSample.exe
+C:\Users\Vale\Documents\GitHub\Grafika-Proj\03\bin\x64\Debug\AssimpNetSample.pdb
+C:\Users\Vale\Documents\GitHub\Grafika-Proj\03\bin\x64\Debug\AssimpNet.dll
+C:\Users\Vale\Documents\GitHub\Grafika-Proj\03\obj\x64\Debug\Proj.csprojResolveAssemblyReference.cache
+C:\Users\Vale\Documents\GitHub\Grafika-Proj\03\obj\x64\Debug\RacunarskaGrafika.Vezbe.AssimpNetSample.MainForm.resources
+C:\Users\Vale\Documents\GitHub\Grafika-Proj\03\obj\x64\Debug\RacunarskaGrafika.Vezbe.AssimpNetSample.Properties.Resources.resources
+C:\Users\Vale\Documents\GitHub\Grafika-Proj\03\obj\x64\Debug\Proj.csproj.GenerateResource.Cache
