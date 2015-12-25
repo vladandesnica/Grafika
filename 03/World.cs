@@ -250,7 +250,7 @@ namespace RacunarskaGrafika.Vezbe.AssimpNetSample
 
            //Sjaj mjesece
            Gl.glPushMatrix();
-           Gl.glTranslatef(100.0f, 75.0f, -60.0f);
+           Gl.glTranslatef(100.0f, 76.0f, -60.0f);
            Gl.glScalef(0.5f, 0.5f, 0.5f);
            Gl.glColor3ub(252, 252, 219); // bledo zuta boja
            Glu.GLUquadric  m_gluObj = Glu.gluNewQuadric();
