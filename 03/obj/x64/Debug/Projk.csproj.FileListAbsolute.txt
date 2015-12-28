@@ -1,0 +1,18 @@
+C:\Users\Vale\Documents\GitHub\Grafika-Proj\03\obj\x64\Debug\AssimpNetSample.exe
+C:\Users\Vale\Documents\GitHub\Grafika-Proj\03\obj\x64\Debug\AssimpNetSample.pdb
+C:\Users\Vale\Documents\GitHub\Grafika-Proj\03\bin\x64\Debug\3D Models\Duck\duckCM.bmp
+C:\Users\Vale\Documents\GitHub\Grafika-Proj\03\bin\x64\Debug\3D Models\Touareg\German-Zeppelin\Wooden_Floor_01_diffuse.dds_t.jpg
+C:\Users\Vale\Documents\GitHub\Grafika-Proj\03\bin\x64\Debug\Textures\grass-texture.jpg
+C:\Users\Vale\Documents\GitHub\Grafika-Proj\03\bin\x64\Debug\Textures\wood_texture33.jpg
+C:\Users\Vale\Documents\GitHub\Grafika-Proj\03\bin\x64\Debug\3D Models\Duck\duck.dae
+C:\Users\Vale\Documents\GitHub\Grafika-Proj\03\bin\x64\Debug\3D Models\Touareg\German-Zeppelin\Zeppelin.3dxml
+C:\Users\Vale\Documents\GitHub\Grafika-Proj\03\bin\x64\Debug\3D Models\Touareg\Touareg.3DS
+C:\Users\Vale\Documents\GitHub\Grafika-Proj\03\bin\x64\Debug\3D Models\Touareg\11817_Zepplin_V2_L3_v4.3ds
+C:\Users\Vale\Documents\GitHub\Grafika-Proj\03\bin\x64\Debug\AssimpNetSample.exe
+C:\Users\Vale\Documents\GitHub\Grafika-Proj\03\bin\x64\Debug\AssimpNetSample.pdb
+C:\Users\Vale\Documents\GitHub\Grafika-Proj\03\bin\x64\Debug\AssimpNet.dll
+C:\Users\Vale\Documents\GitHub\Grafika-Proj\03\obj\x64\Debug\Projk.csprojResolveAssemblyReference.cache
+C:\Users\Vale\Documents\GitHub\Grafika-Proj\03\obj\x64\Debug\RacunarskaGrafika.Vezbe.AssimpNetSample.MainForm.resources
+C:\Users\Vale\Documents\GitHub\Grafika-Proj\03\obj\x64\Debug\RacunarskaGrafika.Vezbe.AssimpNetSample.Properties.Resources.resources
+C:\Users\Vale\Documents\GitHub\Grafika-Proj\03\obj\x64\Debug\Projk.csproj.GenerateResource.Cache
+C:\Users\Vale\Documents\GitHub\Grafika-Proj\03\bin\x64\Debug\Textures\metal-texture.jpg
