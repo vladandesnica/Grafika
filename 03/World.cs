@@ -22,6 +22,14 @@ namespace RacunarskaGrafika.Vezbe.AssimpNetSample
     {
         #region Atributi
 
+        private int[] m_textures = null;
+
+        /// <summary>
+        ///	 Putanje do slika koje se koriste za teksture
+        /// </summary>
+        //  private string m_textureFile = Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), "Textures\\wood_texture33.jpg");
+
+        private string m_textureFile = @"C:\Users\Vale\Documents\GitHub\Grafika-Proj\03\Textures\grass-texture.jpg";
         /// <summary>
         ///	 Scena koja se prikazuje.
         /// </summary>
@@ -234,18 +242,27 @@ namespace RacunarskaGrafika.Vezbe.AssimpNetSample
            Gl.glPushMatrix();
 
            Gl.glDisable(Gl.GL_CULL_FACE);
-    
-           Gl.glColor3ub(220,220,220);
+
+           Gl.glEnable(Gl.GL_TEXTURE_2D);
+           Gl.glBindTexture(Gl.GL_TEXTURE_2D, m_textures[0]);
+           
+
+           //Gl.glColor3ub(220,220,220);
            Gl.glBegin(Gl.GL_QUADS);
 
-           Gl.glColor3ub(220, 220, 220);
+          // Gl.glColor3ub(220, 220, 220);
+
+           Gl.glTexCoord2f(0.0f, 0.0f);
            Gl.glVertex3d(-100.0f, -36.0f / 2, -100.0f);
+           Gl.glTexCoord2f(0.0f, 1.0f);
            Gl.glVertex3d(100.0f, -36.0f / 2, -100.0f);
+           Gl.glTexCoord2f(1.0f, 1.0f);
            Gl.glVertex3d(100.0f, -36.0f / 2, 20.0f);
+           Gl.glTexCoord2f(1.0f, 0.0f);
            Gl.glVertex3d(-100.0f, -36.0f / 2, 20.0f);
         
            Gl.glEnd();
-
+           Gl.glDisable(Gl.GL_TEXTURE_2D);
            Gl.glPopMatrix();
 
            //Sjaj mjesece
@@ -262,7 +279,7 @@ namespace RacunarskaGrafika.Vezbe.AssimpNetSample
 
            #region Hangar
            Gl.glPushMatrix();
-            
+          // Gl.glEnable(Gl.GL_TEXTURE_2D);
             Gl.glEnable(Gl.GL_DEPTH_TEST);
             Gl.glEnable(Gl.GL_CULL_FACE);
 
@@ -278,6 +295,7 @@ namespace RacunarskaGrafika.Vezbe.AssimpNetSample
             
             
             Gl.glPopMatrix();
+         //   Gl.glDisable(Gl.GL_TEXTURE_2D);
 
            #endregion Hangar
 
@@ -342,9 +360,54 @@ namespace RacunarskaGrafika.Vezbe.AssimpNetSample
         /// </summary>
         private void Initialize()
         {
-            Gl.glClearColor(0.0f, 0.0f, 0.2588f, 1.0f); // teget boja
             Gl.glEnable(Gl.GL_DEPTH_TEST);
             Gl.glEnable(Gl.GL_CULL_FACE);
+
+            // Ukljuci color tracking
+            Gl.glEnable(Gl.GL_COLOR_MATERIAL);
+
+            // Podesi na koje parametre materijala se odnose pozivi glColor funkcije
+            Gl.glColorMaterial(Gl.GL_FRONT, Gl.GL_AMBIENT_AND_DIFFUSE);
+
+            Gl.glEnable(Gl.GL_LIGHTING);
+            Gl.glEnable(Gl.GL_NORMALIZE);
+
+            // Setuj ambijentalno svetlo
+            float[] whiteLight = { 1.0f, 1.0f, 1.0f, 1.0f };
+            Gl.glLightModelfv(Gl.GL_LIGHT_MODEL_AMBIENT, whiteLight);
+
+            #region textures 
+
+            m_textures = new int[1];
+            
+            // Ucitaj slike i kreiraj teksture
+
+            Gl.glGenTextures(1, m_textures);
+            Gl.glBindTexture(Gl.GL_TEXTURE_2D, m_textures[0]);
+
+            // Ucitaj sliku i podesi parametre teksture
+            Bitmap image = new Bitmap(m_textureFile);
+            // rotiramo sliku zbog koordinantog sistema opengl-a
+            image.RotateFlip(RotateFlipType.RotateNoneFlipY);
+            Rectangle rect = new Rectangle(0, 0, image.Width, image.Height);
+            // RGBA format (dozvoljena providnost slike tj. alfa kanal)
+            BitmapData imageData = image.LockBits(rect, System.Drawing.Imaging.ImageLockMode.ReadOnly,
+                                                  System.Drawing.Imaging.PixelFormat.Format32bppArgb);
+
+            Glu.gluBuild2DMipmaps(Gl.GL_TEXTURE_2D, (int)Gl.GL_RGBA8, image.Width, image.Height, Gl.GL_BGRA, Gl.GL_UNSIGNED_BYTE, imageData.Scan0);
+            Gl.glTexParameteri((int)Gl.GL_TEXTURE_2D, (int)Gl.GL_TEXTURE_MIN_FILTER, (int)Gl.GL_LINEAR);		// Linear Filtering
+            Gl.glTexParameteri((int)Gl.GL_TEXTURE_2D, (int)Gl.GL_TEXTURE_MAG_FILTER, (int)Gl.GL_LINEAR);		// Linear Filtering
+            Gl.glTexParameterf(Gl.GL_TEXTURE_2D, Gl.GL_TEXTURE_WRAP_S, Gl.GL_REPEAT);
+            Gl.glTexParameterf(Gl.GL_TEXTURE_2D, Gl.GL_TEXTURE_WRAP_T, Gl.GL_REPEAT);
+            Gl.glTexEnvi(Gl.GL_TEXTURE_ENV, Gl.GL_TEXTURE_ENV_MODE, Gl.GL_MODULATE);
+            
+            image.UnlockBits(imageData);
+            image.Dispose();
+
+            #endregion
+
+
+            Gl.glClearColor(0.0f, 0.0f, 0.2588f, 1.0f); // teget boja
         }
 
         /// <summary>

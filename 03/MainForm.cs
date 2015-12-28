@@ -43,7 +43,7 @@ namespace RacunarskaGrafika.Vezbe.AssimpNetSample
             // Kreiranje OpenGL sveta
             try
             {
-                m_world = new World(Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), "3D Models\\Touareg"), "11817_Zepplin_V2_L3_v4.3ds",openglControl.Width, openglControl.Height);
+                m_world = new World(Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), "3D Models\\Touareg"), "11817_Zepplin_V2_L3_v4.3ds", openglControl.Width, openglControl.Height);
             }
             catch (Exception e)
             {
